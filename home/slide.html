@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        .slide-cont img{
+            width:70%;
+            height: 360px;
+            border-radius: 15px;
+        }
+        .slide-cont button{
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            background: blue;
+            border: white;
+            margin: 12px;
+            color: white;
+        }
+
+    </style>
+    
+    <script>
+
+        function slide(value) {
+            var img;
+            if (value == 0) {
+                img = "../images/shangchi.jpg";
+            }else if (value == 1) {
+                img = "../images/notimetodie.jfif"
+            }
+             else {
+                img = "../images/venom2.jpg";
+            }
+        
+            document.getElementById('slideimg').src=img;
+        }
+        
+        </script>
+
+    <div class="slide-cont">
+       <center>
+            <img id="slideimg" src="../images/shangchi.jpg" alt="">
+        <br>
+        <button onclick="slide(0)">1</button> <button onclick="slide(1)">2</button> <button onclick="slide(2)">3</button></center>
+    </div>
+    
+</body>
+</html>
